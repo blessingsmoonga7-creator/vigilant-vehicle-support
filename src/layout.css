@@ -1,0 +1,49 @@
+﻿/* File: src/layout.css */
+
+:root {
+  --bg-main: #F8F9FA;
+  --bg-surface: #ffffff;
+  --text-main: #111111;
+  --text-muted: #6c757d;
+  --border-color: #E9ECEF;
+}
+
+body.dark-mode {
+  --bg-main: #121212;
+  --bg-surface: #1E1E1E;
+  --text-main: #F8F9FA;
+  --text-muted: #A0A0A0;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* The rest of the layout styles we already had */
+.surface-card {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Make sure text inside cards adjusts */
+.surface-card h1, .surface-card h2, .surface-card h3, .surface-card h4, .surface-card h5, .surface-card h6 {
+  color: var(--text-main) !important;
+}
+
+/* Adjust Bootstrap tables for dark mode */
+body.dark-mode .table {
+  color: var(--text-main);
+}
+body.dark-mode .table-light {
+  background-color: #2a2a2a;
+  color: var(--text-main);
+}
+body.dark-mode .table-light th {
+  background-color: #2a2a2a;
+  color: var(--text-main);
+}
